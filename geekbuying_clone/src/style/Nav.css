@@ -1,0 +1,165 @@
+#navbarTop{
+    background-image: linear-gradient(to top, #2686FB, #318FFB);
+    border-bottom: 1px solid #5CA4FD;
+    height: 36px;
+    color: white;
+    display: flex;
+}
+#navbarTop_content{
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    /* border: 1px solid black; */
+    width: 1500px;
+    margin: auto;
+}
+.navbarTop_content_sub{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid white; */
+    margin: 0px 20px 0px 0px;
+    font-size: 14px;
+}
+.navbarTop_content_sub p{
+    margin: 0px 3px;
+}
+#navbarDiv{
+    background-image: linear-gradient(to top,#0B6FFE, #2585FC);
+    height: 86px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#logoDiv{
+    height: 50px;
+    width: 188px;
+    /* border: 1px solid black; */
+}
+#logoDiv img{
+    width: 100%;
+    height: 100%;
+}
+#searchDiv{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+}
+#searchDiv_sub{
+    margin: 0px 10px;
+    padding: 0px 10px 0px 0px;
+    width: 130px;
+    border-right: 1px solid #666666;
+    height: 20px;
+    color: #666666;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+}
+#searchDiv input{
+    width: 450px;
+    height: 48px;
+    padding: 0px 5px;
+    color: #333333;
+}
+#searchDiv input:focus{
+    outline: none;
+}
+#searchIcon{
+    width: 50px;
+    /* border: 1px solid black; */
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: #2988FB;
+}
+#accountDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid black; */
+    width: 320px;
+    height: 50px;
+}
+#shippingDiv{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    width: 90px;
+}
+#countryFlag{
+    height: 20px;
+    width: 28px;
+}
+#currencyDiv{
+    display: flex;
+}
+#signInDiv{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 30px;
+    /* border: 1px solid white; */
+}
+#signInDiv p{
+    font-size: 15px;
+}
+#cartDiv{
+    font-size: 30px;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid white; */
+}
+#cartCounter{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: relative;
+    left: -12px;
+    top: -10px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+#NavbarBottom{
+    background-color: #2988FB;
+    background-image: linear-gradient(to top, #0066FF, #0A6FFE);
+}
+#NavbarBottomContent {
+    height: 36px;
+    width: 1550px;
+    color: white;
+    display: flex;
+    margin: auto;
+}
+#NavbarBottomSub1{
+    background-image: linear-gradient(to top, #1371ff, #207dff);
+    display: flex;
+    width: 126px;
+    justify-content: center;
+    align-items: center;
+    background-color: #3b90f9;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.NavBottomSub{
+    /* border: 1px solid black; */
+    height: 35px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
