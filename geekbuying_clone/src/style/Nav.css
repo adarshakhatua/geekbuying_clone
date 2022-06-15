@@ -143,16 +143,17 @@
     color: white;
     display: flex;
     margin: auto;
+    font-weight: 500;
 }
-#NavbarBottomSub1{
+#NavbarBottomCategories{
     background-image: linear-gradient(to top, #1371ff, #207dff);
     display: flex;
     width: 126px;
-    justify-content: center;
-    align-items: center;
     background-color: #3b90f9;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+    position: relative;
+    left: 0px;
 }
 .NavBottomSub{
     /* border: 1px solid black; */
@@ -161,5 +162,50 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    position: relative;
+    left: -0px;
 }
+/****************** NAV DROP ONE *********************/
+#NavBottomDrop1{
+    border: 1px solid black;
+    background-color: white;
+    height: 435px;
+    width: 226px;
+    position: relative;
+    top:235px;
+    left: -110px;
+    margin-right: -226px;
+}
+#NavBottomDrop1 ul{
+    list-style-type:none;
+    color: #46474A;
+    font-size: 14px;
+}
+#NavBottomDrop1 li{
+    height: 36px;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    padding: 0px 0px 0px 10px;
+    background-color: #FFFFFF;
+    font-weight: 400;
+}
+#NavBottomDrop1 li:hover{
+    border-left: 3px solid #3b90f9;
+    background-color: #F1F6FD;
+}
+/****************** NAV DROP ONE *********************/
+
+
+/****************** NAV DROP TWO *********************/
+#NavBottomDrop2 {
+    border: 1px solid black;
+    background-color: white;
+    height: 435px;
+    width: 764px;
+    position: relative;
+    left: 225px;
+    top: -433px;
+}
+
+/****************** NAV DROP TWO *********************/
