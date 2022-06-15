@@ -13,6 +13,9 @@
     width: 1500px;
     margin: auto;
 }
+#navbarTop_content div{
+    cursor: pointer;
+}
 .navbarTop_content_sub{
     display: flex;
     justify-content: space-around;
@@ -36,6 +39,7 @@
     height: 50px;
     width: 188px;
     /* border: 1px solid black; */
+    cursor: pointer;
 }
 #logoDiv img{
     width: 100%;
@@ -61,6 +65,7 @@
     justify-content: space-around;
     align-items: center;
     font-size: 15px;
+    cursor: pointer;
 }
 #searchDiv input{
     width: 450px;
@@ -80,6 +85,7 @@
     align-items: center;
     font-size: 22px;
     color: #2988FB;
+    cursor: pointer;
 }
 #accountDiv{
     display: flex;
@@ -88,6 +94,9 @@
     /* border: 1px solid black; */
     width: 320px;
     height: 50px;
+}
+#shippingMainDiv{
+    cursor: pointer;
 }
 #shippingDiv{
     display: flex;
@@ -107,6 +116,7 @@
     justify-content: center;
     align-items: flex-end;
     font-size: 30px;
+    cursor: pointer;
     /* border: 1px solid white; */
 }
 #signInDiv p{
@@ -118,6 +128,7 @@
     height: 50px;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     /* border: 1px solid white; */
 }
 #cartCounter{
@@ -164,10 +175,11 @@
     align-items: center;
     position: relative;
     left: -0px;
+    cursor: pointer;
 }
 /****************** NAV DROP ONE *********************/
 #NavBottomDrop1{
-    border: 1px solid black;
+    border: 1px solid rgb(235, 235, 235);
     background-color: white;
     height: 435px;
     width: 226px;
@@ -175,6 +187,7 @@
     top:235px;
     left: -110px;
     margin-right: -226px;
+    cursor: pointer;
 }
 #NavBottomDrop1 ul{
     list-style-type:none;
@@ -183,10 +196,9 @@
 }
 #NavBottomDrop1 li{
     height: 36px;
-    /* border: 1px solid black; */
     display: flex;
     align-items: center;
-    padding: 0px 0px 0px 10px;
+    padding:10px;
     background-color: #FFFFFF;
     font-weight: 400;
 }
@@ -199,13 +211,133 @@
 
 /****************** NAV DROP TWO *********************/
 #NavBottomDrop2 {
-    border: 1px solid black;
+    box-sizing: content-box;
+    border: 1px solid rgb(224, 224, 224);
+    border-left: 1px solid transparent;
     background-color: white;
     height: 435px;
-    width: 764px;
     position: relative;
     left: 225px;
     top: -433px;
+    color: #333333;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.class00{
+    width: 600px;
+}
+.class01 {
+    width: 500px;
+}
+.class02 {
+    width: 800px;
+}
+.class1{
+    width: 1000px;
+}
+.class2{
+    width: 1200px;
+}
+.class3{
+    width: 1400px;
+}
+.NavBottomDropItems{
+    margin: 0px 0px 0px 0px;
+    /* border: 1px solid red; */
+    box-sizing: content-box;
+    max-height: 435px;
+    width: 200px;
+}
+#NavBottomDrop2 dl{
+    /* border: 1px solid black; */
+    margin: 0px 10px 12px 10px;
+    width: 200px;
+    display: inline-block;
+
+}
+dt{
+    font-size: 15px;
+    cursor: pointer;
+}
+dd{
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.imgDiv{
+    margin: 85px 0px 0px -60px;
+    /* border: 1px solid black; */
+    height: 405px;
+    width: 400px;
 }
 
 /****************** NAV DROP TWO *********************/
+
+
+/**********SHIPPING POP********/
+#shippingPopDiv{
+    position: absolute;
+    top: 115px;
+    left: 1150px;
+    border: 1px solid rgb(224, 224, 224);
+    height: 225px;
+    width: 351px;
+    border-radius: 8px;
+    color: #333333;
+    background-color: white;
+    padding:0px 20px;
+}
+#pointer{
+    border: 10px solid transparent;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    left: 86%;
+    top: -11.4%;
+    border-bottom: 15px solid white;
+}
+#shippingPopDiv li{
+    list-style-type:none;
+    border: 1px solid rgb(200, 200, 200);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+    margin: auto;
+    cursor:pointer;
+}
+#shippingPopDiv li >div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid black; */
+    margin: 4px 20px;
+    height: 30px;
+}
+#shippingPopDiv li>div>img{
+    height: 100%;
+}
+#shippingPopDiv h4{
+    font-size: 92%;
+    padding: 0px;
+    margin: 0px;
+}
+#shippingPopDiv h3 {
+    font-size: 93%;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 500;
+}
+#shippingPopDiv button{
+    height: 30px;
+    width: 68px;
+    border-radius: 3px;
+    background-color: #0066FF;
+    color: white;
+    position: relative;
+    left: 78%;
+    margin: 10px 0px;
+}
+/**********SHIPPING POP********/

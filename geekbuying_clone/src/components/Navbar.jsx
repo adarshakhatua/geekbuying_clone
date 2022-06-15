@@ -12,7 +12,10 @@ import IndiaFlag from "../india.png";
 import { navData } from "./data";
 
 export const Navbar = () => {
-    
+    const [shipping, setShipping] = useState(false);
+    const handleShipping = (data) => {
+        setShipping(data)
+    }
     return (
         <div id="navbarDiv">
             <div id="logoDiv"><img src={Logo} alt="" /></div>
@@ -24,11 +27,12 @@ export const Navbar = () => {
             </div>
             
             <div id="accountDiv">
-                <div >
+                <div id="shippingMainDiv" onMouseEnter={() => { handleShipping(true) }} onMouseLeave={() => { handleShipping(false) }}>
                     <div>Ship to</div>
                     <div id="shippingDiv">
                         <div id="countryFlag"><img src={IndiaFlag} alt="" /></div>
                         <div id="currencyDiv">/INR<IoMdArrowDropdown /></div>
+                        {shipping?<ShippingPop></ShippingPop>:null}
                     </div>
                 </div>
 
@@ -43,6 +47,25 @@ export const Navbar = () => {
         </div>
     )
 }
+
+const ShippingPop = () => {
+    return (
+        <div id="shippingPopDiv">
+            <div id="pointer"></div>
+            <h3>Select Regional Settings</h3>
+            <h4>Ship to</h4>
+            <div name="country" id="country">
+                <li value="india"><div>{<img src="https://cdn.iconscout.com/icon/free/png-64/india-flag-country-nation-union-empire-32988.png" />}{<p>India</p>}</div><div><IoMdArrowDropdown /></div></li>
+            </div>
+            <h4>Currency</h4>
+            <div>
+                <li value="india"><div>{<p>INR ₹</p>}</div><div><IoMdArrowDropdown /></div></li>
+            </div>
+            <button>Save</button>
+        </div>
+    )
+}
+
 export const NavbarTop = () => {
 
     return (
@@ -103,7 +126,6 @@ const NavBottomDrop1 = () => {
     const handleMount = (data) => { setMount(data) };
     const [mount2, setMount2] = useState(null);
     const handleMount2 = (data) => { setMount2(data) };
-    console.log(mount2)
     return (
         <div id="NavBottomDrop1"
             onMouseEnter={() => { handleMount(true) }}
@@ -147,16 +169,45 @@ const NavBottomDrop1 = () => {
                     
                 </li>
             </ul>
-            {mount ? <NavBottomDrop2></NavBottomDrop2>:null}
+            {mount ? <NavBottomDrop2 mount2={mount2}></NavBottomDrop2>:null}
         </div>
     )       
 }
 
 
-const NavBottomDrop2 = () => {
+const NavBottomDrop2 = ({ mount2 }) => {
+
+    let data = navData[mount2];
+    //console.log(data)
     return (
-        <div id="NavBottomDrop2">
-            <h1>hello</h1>
+        <div id="NavBottomDrop2"
+            key={mount2}
+            className={(mount2 === "local_warehouse") ?
+                "class1" : (mount2 === "sports_outdoors") ?
+                    "class2" : (mount2 === "smart_home_garden") ?
+                        "class2" : (mount2 === "consumer_electronics") ?
+                            "class2" : (mount2 === "phone_accessories") ?
+                                "class00" : (mount2 === "tv_boxex_mini_pcs") ?
+                                    "class00" : (mount2 === "computer_tablet_accessories") ?
+                                        "class02" : (mount2 === "toy_hobbies") ?
+                                            "class02" : (mount2 === "wearable_devices") ?
+                                                "class00" : (mount2 === "security_system") ?
+                                                    "class00" : (mount2 === "automobile_motorcycle") ?
+                                                        "class00" : (mount2 === "fashion") ?
+                                                            "class00" : null}>
+            {mount2?Object.entries(data).map(([key, val]) => {
+                return (
+                    <div className="NavBottomDropItems" key={key}>
+                        <dl key={key}>
+                            <dt key={key}>{key !== "image" ? key : null}</dt>
+                            {key !== "image" && val.map((item) => <dd key={item}>{item}</dd>)}
+
+                            {key === "image" ? <div className="imgDiv"><img src={val} /></div> : null}
+
+                        </dl>
+                    </div>
+                )
+            }):null}
         </div>
     )
 }
