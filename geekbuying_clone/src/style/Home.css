@@ -1,0 +1,247 @@
+#anniversaryDiv{
+    height: 50px;
+    width: 1500px;
+    background-color: #F1F5FE;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#anniversaryDiv h4{
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+#anniversaryDiv p{
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: underline;
+    color: #0066FF;
+    margin-left: 10px;
+}
+#FirstDiv{
+    border: 1px solid red;
+    display: flex;
+    width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 670px;
+    margin: auto;
+}
+#imgSLider1{
+    height: 670px;
+    width: 740px;
+    border:1px solid black;
+    border-radius: 5px;
+}
+#DealOfDayDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    height: 670px;
+}
+#DealOfDay{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 313px;
+    width: 698px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#textDealOfDay{
+    display: flex;
+    border: 1px solid blue;
+    height: 34px;
+}
+#dealOfDayProducts{
+    border: 1px solid red;
+    height: 230px;
+}
+#FeaturedProductsDiv{
+    width: 698px;
+    height: 311px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#textFeaturedproducts{
+    height: 34px;
+    border: 1px solid blue;
+}
+#FeaturedProducts{
+    border: 1px solid black;
+    height: 230px;
+}
+#TrendingCategoryDiv{
+    margin: auto;
+    height: 436px;
+    width: 1500px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#TrendingCategory{
+    height: 382px;
+    width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid blue;
+}
+.TrendingCategory{
+    height: 380px;
+    width: 488px;
+    border: 1px solid green;
+}
+#NewForYouDiv{
+    border: 1px solid black;
+    height: 446px;
+    width: 1500px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: space-between;
+}
+#textNewForYou{
+    border: 1px solid blue;
+    display: flex;
+}
+#NewForYou{
+    border: 1px solid black;
+    height: 350px;
+    width: 1452px;
+    margin: auto;
+}
+#EnjoyLifeDiv{
+    height: 686px;
+    width: 1500px;
+    border: 1px solid black;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#EnjoyLife{
+    height: 632px;
+    width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#EnjoyLifeBanner{
+    border: 1px solid green;
+    height: 632px;
+    width: 500px;
+}
+#EnjoyLifeProductDiv{
+    border: 1px solid black;
+    height: 632px;
+    width: 980px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.EnjoyLifeProduct{
+    border: 1px solid black;
+    height: 308px;
+    width: 440px;
+}
+#BestSellerDiv{
+    border: 1px solid black;
+    height: 486px;
+    width: 1500px;
+    margin: auto;
+}
+#BestSellerText{
+    border: 1px solid blue;
+    height: 38px;
+    width: 1500px;
+    display: flex;
+}
+#BestSeller{
+    border: 1px solid red;
+    height: 445px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.BestSellerProduct{
+    border: 1px solid black;
+    height: 405px;
+    width: 244px;
+}
+#PopularBrandsDiv{
+    border: 1px solid brown;
+    margin: auto;
+    width: 1500px;
+    display: flex;
+    flex-direction: column;
+}
+#bannerPopularBrands{
+    height: 260px;
+    width: 1500px;
+    margin: auto;
+    border: 1px dashed green;
+}
+.PopularBrandsSingleDiv{
+    border: 1px solid black;
+    height: 300px;
+    width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#brandBanner{
+    border: 1px dashed green;
+    height: 300px;
+    width: 460px;
+}
+#brandProductsDiv{
+    border: 1px solid red;
+    height: 300px;
+    width: 1040px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.brandproducts{
+    border: 1px solid black;
+    height: 288px;
+    width: 210px;
+}
+#RecommendedForYouDiv{
+    border: 1px solid black;
+    height: 264px;
+    width: 1500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#textRecommendedForYou{
+    border: 1px solid blue;
+    height: 38px;
+}
+#RecommendedForYou{
+    border: 1px solid black;
+    height: 210px;
+    width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.RecommendedProduct{
+    border: 1px dashed green;
+    height: 165px;
+    width: 165px;
+}
