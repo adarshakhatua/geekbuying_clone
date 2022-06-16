@@ -12,7 +12,17 @@ import Logo from "../logo.png";
 import IndiaFlag from "../india.png";
 import { navData } from "./data";
 
-export const Navbar = () => {
+export const Nav = () => {
+    return (
+        <>
+            <NavbarTop></NavbarTop>
+            <Navbar></Navbar>
+            <NavbarBottom></NavbarBottom>
+        </>
+    )
+}
+
+ const Navbar = () => {
     const [shipping, setShipping] = useState(false);
     const handleShippingPop = (data) => {
         setShipping(data)
@@ -107,7 +117,7 @@ const CartPop = () => {
         </div>
     )
 }
-export const NavbarTop = () => {
+ const NavbarTop = () => {
 
     return (
         <div id="navbarTop">
@@ -130,7 +140,7 @@ const Arrow = ({icon,text}) => {
     )
 }
 
-export const NavbarBottom = () => {
+ const NavbarBottom = () => {
     const [mount, setMount] = useState(false);
     const handleMount = (data) => {
         setMount(data)

@@ -1,15 +1,14 @@
 import "./style/App.css";
 
-import { NavbarTop, Navbar, NavbarBottom } from "./components/Navbar";
+import { Nav } from "./components/Navbar";
+import { Footer } from "./components/Footer";
 
 
 function App() {
   return (
     <div className="App">
-      <NavbarTop></NavbarTop>
-      <Navbar></Navbar>
-      <NavbarBottom></NavbarBottom>
-
+      <Nav></Nav>
+      <Footer></Footer>
     </div>
   );
 }
