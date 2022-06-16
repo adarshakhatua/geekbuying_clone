@@ -46,7 +46,7 @@
     height: 100%;
 }
 #searchDiv{
-    border: 1px solid black;
+    border: 1px solid rgb(220, 220, 220);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -341,3 +341,141 @@ dd{
     margin: 10px 0px;
 }
 /**********SHIPPING POP********/
+
+/*********SIGN IN POP**************/
+#signInPop{
+    border: 1px solid rgb(228, 228, 228);
+    height: 180px;
+    width: 290px;
+    border-radius: 8px;
+    background-color: white;
+    color: #333333;
+    position: absolute;
+    top: 112px;
+    padding: 10px 20px;
+}
+#signPointer{
+    height: 30px;
+    width: 30px;
+    border: 15px solid transparent;
+    border-bottom: 15px solid white;
+    position: relative;
+    left: 112px;
+    top: -30px;
+}
+#welcomeGreet{
+    font-size: 18px;
+    text-align: center;
+    /* border: 1px solid black; */
+    position: relative;
+    top: -32px;
+    padding: 0px;
+    height: 25px;
+}
+#buttonDivSignInPop{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 254px;
+    position: relative;
+    top: -18px;
+}
+#joinBtn{
+    height: 36px;
+    width: 120px;
+    border-radius: 4px;
+    background-color: #0066FF;
+    color: white;
+    font-size: 15px;
+}
+#signInBtn{
+    height: 36px;
+    width: 120px;
+    border-radius: 4px;
+    color: #0066FF;
+    background-color:#E5EFFF;
+    font-size: 15px;
+    border: 1px solid #0066FF;
+}
+#orTopDiv{
+    position: relative;
+    top: -18px;
+    height: 16px;
+    width: 254px;
+    border-bottom: 1px solid #E6E7E8;
+}
+#orDiv{
+    background-color: white;
+    /* border: 1px solid black; */
+    width: 30px;
+    height: 18px;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -28px;
+    left:111px;
+    color: #999999;
+}
+#googleAuthDiv{
+    height: 40px;
+    width: 40px;
+    border: 1px solid #dcdbdb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    top: -16px;
+}
+/*********SIGN IN POP**************/
+
+/*********CART POP*****************/
+#cartPopDiv{
+    border: 1px solid rgb(214, 214, 214);
+    max-height: 450px;
+    width: 360px;
+    border-radius: 8px;
+    background-color: white;
+    position: absolute;
+    top: 116px;
+    left: 1420px;
+    padding: 20px;
+}
+#cartPointer{
+    height: 30px;
+    width: 30px;
+    border: 15px solid transparent;
+    border-bottom: 15px solid white;
+    position: relative;
+    top: -50px;
+    left: 246px;
+}
+#cartItems{
+    max-height: 304px;
+    height: 304px;
+    width: 320px;
+    border-bottom: 1px solid rgb(217, 217, 217);
+
+}
+#cartTotal{
+    /* border: 1px solid black; */
+    height: 36px;
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#cartPopButton{
+    height: 40px;
+    width: 320px;
+    background-color: #0066FF;
+    color: white;
+    border-radius: 4px;
+    font-size: 16px;
+}
+/*********CART POP*****************/

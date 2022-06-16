@@ -6,6 +6,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { CgShoppingCart } from "react-icons/cg";
 import { AiOutlineUser } from "react-icons/ai";
 import { IoMdMenu } from "react-icons/io";
+import { FcGoogle } from "react-icons/fc";
 import { useState } from "react";
 import Logo from "../logo.png";
 import IndiaFlag from "../india.png";
@@ -13,8 +14,16 @@ import { navData } from "./data";
 
 export const Navbar = () => {
     const [shipping, setShipping] = useState(false);
-    const handleShipping = (data) => {
+    const handleShippingPop = (data) => {
         setShipping(data)
+    }
+    const [signin, setSignin] = useState(false);
+    const handleSigninPop = (data) => {
+        setSignin(data)
+    }
+    const [cart, setCart] = useState(false);
+    const handleCartPop = (data) => {
+        setCart(data)
     }
     return (
         <div id="navbarDiv">
@@ -27,7 +36,7 @@ export const Navbar = () => {
             </div>
             
             <div id="accountDiv">
-                <div id="shippingMainDiv" onMouseEnter={() => { handleShipping(true) }} onMouseLeave={() => { handleShipping(false) }}>
+                <div id="shippingMainDiv" onMouseEnter={() => { handleShippingPop(true) }} onMouseLeave={() => { handleShippingPop(false) }}>
                     <div>Ship to</div>
                     <div id="shippingDiv">
                         <div id="countryFlag"><img src={IndiaFlag} alt="" /></div>
@@ -36,12 +45,15 @@ export const Navbar = () => {
                     </div>
                 </div>
 
-                <div id="signInDiv">
+                <div id="signInDiv" onMouseEnter={()=>{handleSigninPop(true)}} onMouseLeave={()=>{handleSigninPop(false)}}>
                     <AiOutlineUser/>
                     <p>sign in</p>
+                    {signin ? <SignInPop></SignInPop> : null}
                 </div>
 
-                <div id="cartDiv"><CgShoppingCart/><div id="cartCounter">0</div></div>
+                <div id="cartDiv" onMouseEnter={()=>{handleCartPop(true)}} onMouseLeave={()=>{handleCartPop(false)}}><CgShoppingCart /><div id="cartCounter">0</div>
+                    {cart ? <CartPop></CartPop> : null}
+                </div>
             </div>
             
         </div>
@@ -66,6 +78,35 @@ const ShippingPop = () => {
     )
 }
 
+const SignInPop = () => {
+    return (
+        <div id="signInPop">
+            <div id="signPointer"></div>
+            <div id="welcomeGreet">Welcome to Geekbuying</div>
+            <div id="buttonDivSignInPop">
+                <button id="joinBtn">Join</button>
+                <button id="signInBtn">Sign In</button>
+            </div>
+            <div id="orTopDiv"></div>
+            <div id="orDiv">or</div>
+            <div id="googleAuthDiv"><FcGoogle/></div>
+        </div>
+    )
+}
+
+const CartPop = () => {
+    return (
+        <div id="cartPopDiv">
+            <div id="cartPointer"></div>
+            {<><div id="cartItems"></div>
+                <div id="cartTotal">
+                    <div id="totalItems"></div>
+                    <div id="totalPrice"></div>
+                </div>
+                <button id="cartPopButton">View My Cart</button></>}
+        </div>
+    )
+}
 export const NavbarTop = () => {
 
     return (
