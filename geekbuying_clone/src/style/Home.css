@@ -1,3 +1,6 @@
+#HomePage{
+    font-family: sans-serif;
+}
 #anniversaryDiv{
     height: 50px;
     width: 1500px;
@@ -21,6 +24,7 @@
     color: #0066FF;
     margin-left: 10px;
 }
+
 #FirstDiv{
     border: 1px solid red;
     display: flex;
@@ -57,11 +61,85 @@
 #textDealOfDay{
     display: flex;
     border: 1px solid blue;
-    height: 34px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 10px;
+}
+#textDealOfDay h2{
+    font-size: 24px;
+    font-weight: 700;
+    color: #2E2F32;
+    margin: 0px 10px 0px 0px;
+}
+#textDealOfDay p{
+    font-size: 14px;
+    color: red;
 }
 #dealOfDayProducts{
     border: 1px solid red;
     height: 230px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.dealOfDayProductsSingleDiv{
+    border: 1px solid brown;
+    height: 230px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+.dealOfDayProductsSingleImgDiv{
+    border: 1px solid black;
+    height: 150px;
+    width: 150px;
+}
+.dealOfDayProductsSingleDetailsDiv{
+    height: 60px;
+    border: 1px dotted green;
+}
+.dealOfDayProductsSingleOffDiv{
+    height: 16px;
+    width: 64px;
+    border-radius: 8px;
+    background-color: #F1403C;
+    color: white;
+    font-size: 11px;
+    text-align: center;
+    margin: 2px;
+}
+.dealOfDayProductsSingleDetailsDiv h3{
+    font-size: 18px;
+    font-weight: 700;
+    height: 18px;
+}
+.dealOfDayProductsSingleDetailsDiv p{
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #999999;
+}
+.dealOfDayProductsSingleBottomDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dealOfDayProductsSingleBottomDiv p{
+    font-size: 12px;
+    color: #999999;
+}
+.dealOfDayProductsSingleStatDiv{
+    border: 1px solid #E9EBFC;
+    height: 6px;
+    width: 110px;
+    background-color: #E9EBFC;
+    margin: 4px 0px;
+    border-radius: 5px;
+}
+.dealOfDayProductsSingleProgressDiv{
+    height: 6px;
+    background-color: #0066FF;
+    border-radius: 5px;
+    width: 40%;
 }
 #FeaturedProductsDiv{
     width: 698px;
@@ -72,13 +150,54 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
 #textFeaturedproducts{
-    height: 34px;
+    padding: 12px 0px;
     border: 1px solid blue;
+}
+#textFeaturedproducts h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2E2F32;
+    margin: 0px 10px 0px 0px;
 }
 #FeaturedProducts{
     border: 1px solid black;
     height: 230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.FeaturedProductsSingle{
+    border: 1px solid green;
+    height: 230px;
+    width: 140px;
+}
+.FeaturedProductsSingleImg{
+    border: 1px dotted blue;
+    height: 140px;
+    width: 140px;
+}
+.FeaturedProductsSingleContent{
+    width: 140px;
+}
+.FeaturedProductsSingleContent h3{
+    height: 40px;
+    font-size: 14px;
+    border: 1px solid red;
+}
+.FeaturedProductsSingleContent h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333333;
+    border: 1px solid red;
+}
+.FeaturedProductsSingleContent p {
+    font-size: 14px;
+    height: 20px;
+    color: #999999;
+    text-decoration: line-through;
+    border: 1px solid red;
 }
 #TrendingCategoryDiv{
     margin: auto;
@@ -97,10 +216,37 @@
     align-items: center;
     border: 1px solid blue;
 }
+#textTrendingCategory h2{
+    font-size: 28px;
+    font-weight: 700;
+    color: #333333;
+    margin: 0px 10px 0px 0px;
+}
 .TrendingCategory{
     height: 380px;
     width: 488px;
     border: 1px solid green;
+}
+.TrendingCategoryImg{
+
+}
+.TrendingCategoryText{
+    border: 1px solid black;
+    height: 105px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.TrendingCategoryText h3{
+    font-size: 16px;
+    font-weight: 600;
+    color: #3b3b3b;
+}
+.TrendingCategoryText p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #565656;
 }
 #NewForYouDiv{
     border: 1px solid black;
@@ -110,16 +256,73 @@
     flex-direction: column;
     margin: auto;
     justify-content: space-between;
+    background-color: #F0F6FE;
 }
 #textNewForYou{
     border: 1px solid blue;
     display: flex;
+    align-items: flex-end;
+}
+#textNewForYou h2{
+    font-size: 28px;
+    font-weight: 700;
+    color: #333333;
+    margin: 0px 10px 0px 0px;
+    padding: 0px;
+}
+#textNewForYou p{
+    font-size: 14px;
+    color: #0066FF;
 }
 #NewForYou{
     border: 1px solid black;
     height: 350px;
     width: 1452px;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.NewForYouImg{
+    height: 348px;
+    width: 276px;
+}
+.NewForYou {
+    box-sizing: content-box;
+    border: 1px solid green;
+    height: 324px;
+    width: 244px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 16px 8px 16px;
+    border-radius: 4px;
+    background-color: white;
+}
+.NewForYouImg{
+    border: 1px solid black;
+    height: 244px;
+    width: 244px;
+}
+.NewForYouImg img{
+    height: 100%;
+    width: 100%;
+}
+.NewForYouContent{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.NewForYouContent h3{
+    height: 40px;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 6px 0px 4px;
+}
+.NewForYouContent p{
+    font-size: 18px;
+    font-weight: 700;
+    color: #333333;
 }
 #EnjoyLifeDiv{
     height: 686px;
@@ -129,6 +332,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+#EnjoyLifeDiv h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333333;
+    margin: 0px 10px 0px 0px;
+    padding: 0px;
 }
 #EnjoyLife{
     height: 632px;
@@ -141,6 +351,12 @@
     border: 1px solid green;
     height: 632px;
     width: 500px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+#EnjoyLifeBanner img{
+    height: 100%;
+    width: 100%;
 }
 #EnjoyLifeProductDiv{
     border: 1px solid black;
@@ -155,6 +371,41 @@
     border: 1px solid black;
     height: 308px;
     width: 440px;
+    background-color: #F0F5FD;
+    display: flex;
+    flex-direction: column;
+}
+.EnjoyLifeProduct h3{
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid black;
+    padding: 12px;
+}
+.EnjoyLifeProductSingleDiv{
+    border: 1px solid black;
+    height: 254px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.EnjoyLifeProductSingle{
+    border: 1px dotted blue;
+    height: 254px;
+    width: 210px;
+}
+.EnjoyLifeProductSingleImg{
+    border: 1px solid black;
+    height: 210px;
+    width: 210px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.EnjoyLifeProductSingleTitle{
+    border: 1px solid red;
+    width: 210px;
+    font-size: 14px;
+    color: #0066FF;
+    padding: 10px 0px;
 }
 #BestSellerDiv{
     border: 1px solid black;
@@ -167,6 +418,18 @@
     height: 38px;
     width: 1500px;
     display: flex;
+    align-items: flex-end;
+}
+#BestSellerText h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333333;
+    margin: 0px 10px 0px 0px;
+    padding: 0px;
+}
+#BestSellerText p {
+    font-size: 14px;
+    color: #0066FF;
 }
 #BestSeller{
     border: 1px solid red;
@@ -180,12 +443,74 @@
     height: 405px;
     width: 244px;
 }
+.BestSellerProductImg{
+    height: 240px;
+    width: 240px;
+    border: 1px solid black;
+}
+.BestSellerProductContent{
+    border: 1px dashed gray;
+}
+.BestSellerProductOff{
+    height: 16px;
+    width: 64px;
+    margin: 5px 0px;
+    border-radius: 8px;
+    background-color: #F1403C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: white;
+}
+.BestSellerProductContent h3{
+    border: 1px solid black;
+    height: 40px;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 10px 0px;
+}
+.BestSellerProductRating{
+    border: 1px solid black;
+    height: 18px;
+    display: flex;
+    margin: 8px 0px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.BestSellerProductRatingStar{
+    display: flex;
+    color: gold;
+}
+.BestSellerProductContent h2{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 5px 0px;
+}
+.BestSellerProductContent p {
+    font-size: 14px;
+    color: #999999;
+    text-decoration: line-through;
+}
+.BestSellerProductRating p {
+    text-decoration: none;
+    color: #999999;
+    margin: 0px 5px;
+}
 #PopularBrandsDiv{
     border: 1px solid brown;
     margin: auto;
     width: 1500px;
     display: flex;
     flex-direction: column;
+}
+#PopularBrandsDiv h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333333;
+    margin: 0px 10px 0px 0px;
+    padding: 0px;
 }
 #bannerPopularBrands{
     height: 260px;
@@ -201,10 +526,14 @@
     justify-content: space-between;
     align-items: center;
 }
-#brandBanner{
+.brandBanner{
     border: 1px dashed green;
     height: 300px;
     width: 460px;
+}
+.brandBanner img{
+    height: 100%;
+    width: 100%;
 }
 #brandProductsDiv{
     border: 1px solid red;
@@ -231,6 +560,13 @@
 #textRecommendedForYou{
     border: 1px solid blue;
     height: 38px;
+}
+#textRecommendedForYou h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333333;
+    margin: 0px 10px 0px 0px;
+    padding: 0px;
 }
 #RecommendedForYou{
     border: 1px solid black;
