@@ -33,12 +33,12 @@
     justify-content: space-between;
     align-items: center;
     height: 670px;
-    margin: auto;
+    margin: 10px auto;
 }
 #imgSLider1{
     height: 670px;
     width: 740px;
-    border:1px solid black;
+    /* border:1px solid black; */
     border-radius: 5px;
 }
 #DealOfDayDiv{
@@ -46,7 +46,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 670px;
 }
 #DealOfDay{
@@ -55,12 +55,12 @@
     justify-content: space-between;
     height: 313px;
     width: 698px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 5px;
 }
 #textDealOfDay{
     display: flex;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     justify-content: flex-start;
     align-items: flex-end;
     padding: 10px;
@@ -83,20 +83,20 @@
     align-items: center;
 }
 .dealOfDayProductsSingleDiv{
-    border: 1px solid brown;
+    /* border: 1px solid brown; */
     height: 230px;
     width: 150px;
     display: flex;
     flex-direction: column;
 }
 .dealOfDayProductsSingleImgDiv{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 150px;
     width: 150px;
 }
 .dealOfDayProductsSingleDetailsDiv{
     height: 60px;
-    border: 1px dotted green;
+    /* border: 1px dotted green; */
 }
 .dealOfDayProductsSingleOffDiv{
     height: 16px;
@@ -153,7 +153,7 @@
 
 #textFeaturedproducts{
     padding: 12px 0px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 #textFeaturedproducts h2 {
     font-size: 24px;
@@ -162,19 +162,19 @@
     margin: 0px 10px 0px 0px;
 }
 #FeaturedProducts{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 230px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .FeaturedProductsSingle{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     height: 230px;
     width: 140px;
 }
 .FeaturedProductsSingleImg{
-    border: 1px dotted blue;
+    /* border: 1px dotted blue; */
     height: 140px;
     width: 140px;
 }
@@ -184,26 +184,26 @@
 .FeaturedProductsSingleContent h3{
     height: 40px;
     font-size: 14px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .FeaturedProductsSingleContent h4 {
     font-size: 18px;
     font-weight: 700;
     color: #333333;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .FeaturedProductsSingleContent p {
     font-size: 14px;
     height: 20px;
     color: #999999;
     text-decoration: line-through;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 #TrendingCategoryDiv{
-    margin: auto;
+    margin: 40px auto;
     height: 436px;
     width: 1500px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -214,24 +214,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 #textTrendingCategory h2{
     font-size: 28px;
     font-weight: 700;
+    padding-left: 24px;
     color: #333333;
     margin: 0px 10px 0px 0px;
+    padding: 10px 0px;
 }
 .TrendingCategory{
     height: 380px;
     width: 488px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 .TrendingCategoryImg{
 
 }
 .TrendingCategoryText{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 105px;
     padding: 14px;
     display: flex;
@@ -249,33 +251,35 @@
     color: #565656;
 }
 #NewForYouDiv{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 446px;
     width: 1500px;
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 20px auto;
     justify-content: space-between;
     background-color: #F0F6FE;
+    border-radius: 4px;
 }
 #textNewForYou{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+    padding-left: 25px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 }
 #textNewForYou h2{
     font-size: 28px;
     font-weight: 700;
     color: #333333;
     margin: 0px 10px 0px 0px;
-    padding: 0px;
+    padding: 10px 0px;
 }
 #textNewForYou p{
     font-size: 14px;
     color: #0066FF;
 }
 #NewForYou{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 350px;
     width: 1452px;
     margin: auto;
@@ -283,13 +287,20 @@
     justify-content: space-between;
     align-items: center;
 }
+#NewForYouSlider{
+    /* border: 5px dotted red; */
+    overflow: hidden;
+    width: 1160px;
+    height: 100%;
+    justify-content: space-between;
+}
 .NewForYouImg{
     height: 348px;
     width: 276px;
 }
 .NewForYou {
     box-sizing: content-box;
-    border: 1px solid green;
+    /* border: 4px solid green; */
     height: 324px;
     width: 244px;
     display: flex;
@@ -299,7 +310,7 @@
     background-color: white;
 }
 .NewForYouImg{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 244px;
     width: 244px;
 }
@@ -308,7 +319,7 @@
     width: 100%;
 }
 .NewForYouContent{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -328,7 +339,7 @@
     height: 686px;
     width: 1500px;
     border: 1px solid black;
-    margin: auto;
+    margin: 40px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -338,7 +349,7 @@
     font-weight: 700;
     color: #333333;
     margin: 0px 10px 0px 0px;
-    padding: 0px;
+    padding: 10px 0px;
 }
 #EnjoyLife{
     height: 632px;
@@ -411,14 +422,14 @@
     border: 1px solid black;
     height: 486px;
     width: 1500px;
-    margin: auto;
+    margin: 40px auto;
 }
 #BestSellerText{
     border: 1px solid blue;
-    height: 38px;
     width: 1500px;
     display: flex;
     align-items: flex-end;
+    padding: 10px 0px;
 }
 #BestSellerText h2 {
     font-size: 28px;
@@ -500,7 +511,7 @@
 }
 #PopularBrandsDiv{
     border: 1px solid brown;
-    margin: auto;
+    margin: 40px auto;
     width: 1500px;
     display: flex;
     flex-direction: column;
@@ -510,7 +521,7 @@
     font-weight: 700;
     color: #333333;
     margin: 0px 10px 0px 0px;
-    padding: 0px;
+    padding: 10px 0px;
 }
 #bannerPopularBrands{
     height: 260px;
@@ -525,6 +536,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 20px auto;
 }
 .brandBanner{
     border: 1px dashed green;
@@ -544,15 +556,58 @@
     align-items: center;
 }
 .brandproducts{
+    box-sizing: content-box;
     border: 1px solid black;
     height: 288px;
     width: 210px;
+    padding: 0px 25px;
+}
+.brandproductsImg{
+    height: 180px;
+    width: 210px;
+    border: 1px solid black;
+}
+.brandproductsImg img{
+    height: 100%;
+    width: 100%;
+}
+.brandproductsContentOff{
+    /* border: 1px solid black; */
+    height: 16px;
+    width: 64px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    background-color: #F1403C;
+    margin: 5px;
+}
+.brandproductsContent h3{
+    height: 40px;
+    font-size: 14px;
+    line-height: 20px;
+    width: 210px;
+    border: 1px solid black;
+}
+.brandproductsContent h4{
+    font-size: 18px;
+    font-weight: 700;
+    color: #333333;
+    height: 22px;
+}
+.brandproductsContent p{
+    font-size: 14px;
+    color: #999999;
+    height: 16px;
+    text-decoration: line-through;
 }
 #RecommendedForYouDiv{
     border: 1px solid black;
     height: 264px;
     width: 1500px;
-    margin: auto;
+    margin: 40px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

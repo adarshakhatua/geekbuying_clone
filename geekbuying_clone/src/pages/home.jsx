@@ -2,6 +2,8 @@ import "../style/Home.css";
 import CaptionCarousel from "../components/slider1";
 import BrandSlider from "../components/popularBrandsSlider";
 import { AiFillStar } from "react-icons/ai";
+import MultiItemCarousel from "../components/productSlider";
+
 
 
 export const Home = () => {
@@ -114,19 +116,14 @@ export const Home = () => {
                         <img src="https://img.gkbcdn.com/bn/2206/276x348-62a6e6f12b40c917a8566ce6._p1_.jpg" alt="" />
                     </div>
 
-                    <div className="NewForYou">
-                        <div className="NewForYouImg">
-                            <img src="https://img.gkbcdn.com/p/2022-06-08/GREEN-TIME-T2-Alarm-Clock-Radio-White-501646-0._w280_p1_.jpg" alt="" />
-                        </div>
-                        <div className="NewForYouContent">
-                            <h3>GREEN TIME T2 Dual USB Charging Alarm Clock Wireless Radio, LCD</h3>
-                            <p>₹2415.00</p>
-                        </div>
+                    <div id="NewForYouSlider">
+                        {/* <NewForYouCard /> */}
+                        {/* <ProductSlider/> */}
+                        <MultiItemCarousel/>
+                        {/* <div className="NewForYou"></div>
+                        <div className="NewForYou"></div>
+                        <div className="NewForYou"></div> */}
                     </div>
-
-                    <div className="NewForYou"></div>
-                    <div className="NewForYou"></div>
-                    <div className="NewForYou"></div>
                 </div>
             </div>
 
@@ -257,7 +254,18 @@ export const Home = () => {
                         <img src="https://img.gkbcdn.com/bb/tronsmart-20210123120544453._p1_.jpg" alt="" />
                     </div>
                     <div id="brandProductsDiv">
-                        <div className="brandproducts"></div>
+                        <div className="brandproducts">
+                            <div className="brandproductsImg">
+                                <img src="https://img.gkbcdn.com/p/2022-04-24/eleglide-m1-plus-upgraded-version-electric-bike-12-5ah-250w-black-258649-1650765309927._w280_p1_.jpg" alt="" />
+                            </div>
+                            <div className="brandproductsContent">
+                                <div className="brandproductsContentOff">24% OFF</div>
+                                <h3>ELEGLIDE M1 PLUS Electric Mountain Bike Upgraded Version</h3>
+                                <h4>₹65103.50</h4>
+                                <p>₹85362.43</p>
+                            </div>
+                        </div>
+
                         <div className="brandproducts"></div>
                         <div className="brandproducts"></div>
                         <div className="brandproducts"></div>
@@ -268,7 +276,18 @@ export const Home = () => {
                         <img src="https://img.gkbcdn.com/bb/jimmy-20200910094916929._p1_.jpg" alt="" />
                     </div>
                     <div id="brandProductsDiv">
-                        <div className="brandproducts"></div>
+                        <div className="brandproducts">
+                            <div className="brandproductsImg">
+                                <img src="https://img.gkbcdn.com/p/2020-04-09/JIMMY-JV35-Anti-mite-Vacuum-Cleaner-Gray-899874-._w280_p1_.jpg" alt="" />
+                            </div>
+                            <div className="brandproductsContent">
+                                <div className="brandproductsContentOff">19% OFF</div>
+                                <h3>JIMMY JV35 Handheld Anti-mite Vacuum Cleaner High</h3>
+                                <h4>₹11031.37</h4>
+                                <p>₹13688.75</p>
+                            </div>
+                        </div>
+
                         <div className="brandproducts"></div>
                         <div className="brandproducts"></div>
                         <div className="brandproducts"></div>
@@ -279,7 +298,17 @@ export const Home = () => {
                         <img src="https://img.gkbcdn.com/bb/eleglide-20220531151324673._p1_.jpg" alt="" />
                     </div>
                     <div id="brandProductsDiv">
-                        <div className="brandproducts"></div>
+                        <div className="brandproducts">
+                            <div className="brandproductsImg">
+                                <img src="https://img.gkbcdn.com/p/2021-12-22/SCULPFUN-S9-Laser-Engraver-481991-0._w280_p1_.jpg" alt="" />
+                            </div>
+                            <div className="brandproductsContent">
+                                <div className="brandproductsContentOff">24% OFF</div>
+                                <h3>SCULPFUN S9 5.5W Laser Engraver, 0.06mm Ultra-Fine</h3>
+                                <h4>₹23835.93</h4>
+                                <p>₹32209.91</p>
+                            </div>
+                        </div>
                         <div className="brandproducts"></div>
                         <div className="brandproducts"></div>
                         <div className="brandproducts"></div>
@@ -290,7 +319,17 @@ export const Home = () => {
                         <img src="https://img.gkbcdn.com/bb/sculpfun-20220617114417913._p1_.jpg" alt="" />
                     </div>
                     <div id="brandProductsDiv">
-                        <div className="brandproducts"></div>
+                        <div className="brandproducts">
+                            <div className="brandproductsImg">
+                                <img src="https://img.gkbcdn.com/p/2020-01-09/Tronsmart-element-T6-plus-Upgrade-Black-895558-._w280_p1_.jpg" alt="" />
+                            </div>
+                            <div className="brandproductsContent">
+                                <div className="brandproductsContentOff">38% OFF</div>
+                                <h3>Tronsmart T6 Plus Upgraded Edition Bluetooth 5.0 40W</h3>
+                                <h4>₹4025.53</h4>
+                                <p>₹6441.34</p>
+                            </div>
+                        </div>
                         <div className="brandproducts"></div>
                         <div className="brandproducts"></div>
                         <div className="brandproducts"></div>
@@ -303,7 +342,9 @@ export const Home = () => {
                     <h2>Recommended For You</h2>
                 </div>
                 <div id="RecommendedForYou">
-                    <div className="RecommendedProduct"></div>
+                    <div className="RecommendedProduct">
+                        <img src="https://img.gkbcdn.com/p/2022-01-18/FAFREES-26-Inch-Electric-Bike-250W-Powerful-Motor---White-493949-0._w280_.jpg" alt="" />
+                    </div>
                     <div className="RecommendedProduct"></div>
                     <div className="RecommendedProduct"></div>
                     <div className="RecommendedProduct"></div>
@@ -312,6 +353,21 @@ export const Home = () => {
                     <div className="RecommendedProduct"></div>
                     <div className="RecommendedProduct"></div>
                 </div>
+            </div>
+        </div>
+    )
+}
+
+
+export const NewForYouCard = ({image,title,price}) => {
+    return (
+        <div className="NewForYou" >
+            <div className="NewForYouImg">
+                <img src={image} alt="" />
+            </div>
+            <div className="NewForYouContent">
+                <h3>{title}</h3>
+                <p>₹ {price}</p>
             </div>
         </div>
     )

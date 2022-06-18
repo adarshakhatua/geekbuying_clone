@@ -147,6 +147,8 @@
 #NavbarBottom{
     background-color: #2988FB;
     background-image: linear-gradient(to top, #0066FF, #0A6FFE);
+    position: relative;
+    z-index: 10;
 }
 #NavbarBottomContent {
     height: 36px;

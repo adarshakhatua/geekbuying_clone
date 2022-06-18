@@ -7,7 +7,6 @@ import {
     Center,
 } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
-import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 // And react-slick as our Carousel Lib
 import Slider from 'react-slick';
 

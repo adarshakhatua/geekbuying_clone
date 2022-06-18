@@ -5,15 +5,15 @@ import { CgFacebook } from "react-icons/cg";
 import { AiFillYoutube, AiOutlineTwitter } from "react-icons/ai";
 import { FaTelegramPlane } from "react-icons/fa";
 import { TiSocialInstagram } from "react-icons/ti";
-import stock from "./files/stock.png";
-import payments from "./files/payments.png";
-import offers from "./files/offers.png";
-import cs_support from "./files/customer support.png";
+import stock from "../files/stock.png";
+import payments from "../files/payments.png";
+import offers from "../files/offers.png";
+import cs_support from "../files/customer support.png";
 import { useState } from "react";
-import company from "./files/company.png";
-import reseller from "./files/reseller.png";
-import trustpilot from "./files/trustpilot.png";
-import tictok from "./files/tictok.png";
+import company from "../files/company.png";
+import reseller from "../files/reseller.png";
+import trustpilot from "../files/trustpilot.png";
+import tictok from "../files/tictok.png";
 
 
 export const Footer = () => {
