@@ -3,18 +3,55 @@ import CaptionCarousel from "../components/slider1";
 import BrandSlider from "../components/popularBrandsSlider";
 import { AiFillStar } from "react-icons/ai";
 import { MultiItemCarousel, BestSellerMultiItemCarousel, RecommendedMultiItemCarousel } from "../components/productSlider";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProduct } from "../redux/products/action";
+import { fetchProduct, fetchDealOfDayProduct, fetchFeatureProduct,fetchNewForUProduct,fetchBrand1Product,fetchBrand2Product,fetchBrand3Product,fetchBrand4Product } from "../redux/products/action";
+
 
 
 export const Home = () => {
     const dispatch = useDispatch();
     const data = useSelector((store) => store.product.data);
-    
+    const newForYou = useSelector((store) => store.product.newForYou);
+    const dealOfDay = useSelector((store) => store.product.deal_of_day);
+    const feature_product = useSelector((store) => store.product.feature_product);
+    const brand1 = useSelector((store) => store.product.brand1);
+    const brand2 = useSelector((store) => store.product.brand2);
+    const brand3 = useSelector((store) => store.product.brand3);
+    const brand4 = useSelector((store) => store.product.brand4);
+    const [timer, setTimer] = useState(28000);
+    const [id, setId] = useState(null);
+    console.log(brand1);
     useEffect(() => {
-        dispatch(fetchProduct());
-    },[])
+        !newForYou.length && dispatch(fetchNewForUProduct({ "tag": "new for you" }));
+        !data.length && dispatch(fetchProduct());
+        !dealOfDay.length && dispatch(fetchDealOfDayProduct({ "tag": "deal of day" }));
+        !feature_product.length && dispatch(fetchFeatureProduct({ "tag": "feature Product" }));
+        !brand1.length && dispatch(fetchBrand1Product({ "brand": "Tronsmart" }));
+        !brand2.length && dispatch(fetchBrand2Product({ "brand": "SCULPFUN" }));
+        !brand3.length && dispatch(fetchBrand3Product({ "brand": "JIMMY" }));
+        !brand4.length && dispatch(fetchBrand4Product({ "brand": "ELEGLIDE" }));
+    }, [])
+
+    useEffect(() => {
+        const TimerFn = () => {
+            if (!id) {
+                const Id = setInterval(() => { setTimer((timer) => timer - 1) }, 1000);
+                setId(Id);
+            }
+            else {
+                
+                clearInterval(id)
+            }
+        }
+        TimerFn();
+    }, [id]);
+    useEffect(() => {
+        if (timer <= 0) {  
+            clearInterval(id);
+        }
+    }, [timer])
+    
     return (
         <div id="HomePage">
             <div id="anniversaryDiv">
@@ -28,31 +65,11 @@ export const Home = () => {
                     <div id="DealOfDay">
                         <div id="textDealOfDay">
                             <h2>Deal of the Day</h2>
-                            <p>Ends in 00:19:16:25</p>
+                            <p>Ends in {Math.floor(timer / (3600 * 24))}:{Math.floor(timer / (3600))}:{Math.floor((timer % 3600) / 60)}:{Math.floor((timer % 60))}</p>
                         </div>
                         <div id="dealOfDayProducts">
-                            <div className="dealOfDayProductsSingleDiv">
-                                <div className="dealOfDayProductsSingleImgDiv">
-                                    <img src="https://img.gkbcdn.com/p/2022-03-05/343ff9fe8cea46f48ba1025ffadf4a58-497360-0._w280_p1_.jpg" alt="" />
-                                </div>
-                                <div className="dealOfDayProductsSingleDetailsDiv">
-                                    <div className="dealOfDayProductsSingleOffDiv">25% OFF</div>
-                                    <h3>₹4025.53</h3>
-                                    <p>₹5394.49</p>
-                                </div>
-                                <div className="dealOfDayProductsSingleBottomDiv">
-                                    <div className="dealOfDayProductsSingleStatDiv">
-                                        <div className="dealOfDayProductsSingleProgressDiv"></div>
-                                    </div>
-                                    <p>54 left</p>
-                                </div>
-                            </div>
-
-                            <div className="dealOfDayProductsSingleDiv"></div>
-
-                            <div className="dealOfDayProductsSingleDiv"></div>
-
-                            <div className="dealOfDayProductsSingleDiv"></div>
+                            {dealOfDay?.map((item) =>
+                                <DealOfDay image={item.img} price={item.price} StricePrice={item.strick_of_price} key={item.title} />)}
                         </div>
                     </div>
                     <div id="FeaturedProductsDiv">
@@ -60,20 +77,9 @@ export const Home = () => {
                             <h2>Featured Products</h2>
                         </div>
                         <div id="FeaturedProducts">
-                            <div className="FeaturedProductsSingle">
-                                <div className="FeaturedProductsSingleImg">
-                                    <img src="https://img.gkbcdn.com/p/2019-05-11/h96-max-rk3318-android-9-0-4gb-64gb-4k-tv-box-1574132538025._w280_p1_.jpg" alt="" />
-                                </div>
-                                <div className="FeaturedProductsSingleContent">
-                                    <h3>H96 MAX RK3318 Android 9.0</h3>
-                                    <h4>₹3783.95</h4>
-                                    <p>₹4347.64</p>
-                                </div>
-                            </div>
-
-                            <div className="FeaturedProductsSingle"></div>
-                            <div className="FeaturedProductsSingle"></div>
-                            <div className="FeaturedProductsSingle"></div>
+                            {feature_product?.map((item) =>
+                                <FeatureProduct image={item.img} title={item.title} price={item.price} strikePrice={item.strick_of_price} key={ item.title} />
+                            )}
                         </div>
                     </div>
                 </div>
@@ -125,12 +131,7 @@ export const Home = () => {
                     </div>
 
                     <div id="NewForYouSlider">
-                        {/* <NewForYouCard /> */}
-                        {/* <ProductSlider/> */}
-                        <MultiItemCarousel data={data} />
-                        {/* <div className="NewForYou"></div>
-                        <div className="NewForYou"></div>
-                        <div className="NewForYou"></div> */}
+                        <MultiItemCarousel data={newForYou} />
                     </div>
                 </div>
             </div>
@@ -240,64 +241,9 @@ export const Home = () => {
                         <img src="https://img.gkbcdn.com/bb/tronsmart-20210123120544453._p1_.jpg" alt="" />
                     </div>
                     <div id="brandProductsDiv">
-                        <div className="brandproducts">
-                            <div className="brandproductsImg">
-                                <img src="https://img.gkbcdn.com/p/2022-04-24/eleglide-m1-plus-upgraded-version-electric-bike-12-5ah-250w-black-258649-1650765309927._w280_p1_.jpg" alt="" />
-                            </div>
-                            <div className="brandproductsContent">
-                                <div className="brandproductsContentOff">24% OFF</div>
-                                <h3>ELEGLIDE M1 PLUS Electric Mountain Bike Upgraded Version</h3>
-                                <h4>₹65103.50</h4>
-                                <p>₹85362.43</p>
-                            </div>
-                        </div>
-
-                        <div className="brandproducts"></div>
-                        <div className="brandproducts"></div>
-                        <div className="brandproducts"></div>
-                    </div>
-                </div>
-                <div className="PopularBrandsSingleDiv">
-                    <div className="brandBanner">
-                        <img src="https://img.gkbcdn.com/bb/jimmy-20200910094916929._p1_.jpg" alt="" />
-                    </div>
-                    <div id="brandProductsDiv">
-                        <div className="brandproducts">
-                            <div className="brandproductsImg">
-                                <img src="https://img.gkbcdn.com/p/2020-04-09/JIMMY-JV35-Anti-mite-Vacuum-Cleaner-Gray-899874-._w280_p1_.jpg" alt="" />
-                            </div>
-                            <div className="brandproductsContent">
-                                <div className="brandproductsContentOff">19% OFF</div>
-                                <h3>JIMMY JV35 Handheld Anti-mite Vacuum Cleaner High</h3>
-                                <h4>₹11031.37</h4>
-                                <p>₹13688.75</p>
-                            </div>
-                        </div>
-
-                        <div className="brandproducts"></div>
-                        <div className="brandproducts"></div>
-                        <div className="brandproducts"></div>
-                    </div>
-                </div>
-                <div className="PopularBrandsSingleDiv">
-                    <div className="brandBanner">
-                        <img src="https://img.gkbcdn.com/bb/eleglide-20220531151324673._p1_.jpg" alt="" />
-                    </div>
-                    <div id="brandProductsDiv">
-                        <div className="brandproducts">
-                            <div className="brandproductsImg">
-                                <img src="https://img.gkbcdn.com/p/2021-12-22/SCULPFUN-S9-Laser-Engraver-481991-0._w280_p1_.jpg" alt="" />
-                            </div>
-                            <div className="brandproductsContent">
-                                <div className="brandproductsContentOff">24% OFF</div>
-                                <h3>SCULPFUN S9 5.5W Laser Engraver, 0.06mm Ultra-Fine</h3>
-                                <h4>₹23835.93</h4>
-                                <p>₹32209.91</p>
-                            </div>
-                        </div>
-                        <div className="brandproducts"></div>
-                        <div className="brandproducts"></div>
-                        <div className="brandproducts"></div>
+                        {brand1?.map((item) =>
+                            <BrandProduct image={item.img} title={item.title} price={item.price} strikePrice={item.strick_of_price} key={item.title} />
+                        )}
                     </div>
                 </div>
                 <div className="PopularBrandsSingleDiv">
@@ -305,20 +251,29 @@ export const Home = () => {
                         <img src="https://img.gkbcdn.com/bb/sculpfun-20220617114417913._p1_.jpg" alt="" />
                     </div>
                     <div id="brandProductsDiv">
-                        <div className="brandproducts">
-                            <div className="brandproductsImg">
-                                <img src="https://img.gkbcdn.com/p/2020-01-09/Tronsmart-element-T6-plus-Upgrade-Black-895558-._w280_p1_.jpg" alt="" />
-                            </div>
-                            <div className="brandproductsContent">
-                                <div className="brandproductsContentOff">38% OFF</div>
-                                <h3>Tronsmart T6 Plus Upgraded Edition Bluetooth 5.0 40W</h3>
-                                <h4>₹4025.53</h4>
-                                <p>₹6441.34</p>
-                            </div>
-                        </div>
-                        <div className="brandproducts"></div>
-                        <div className="brandproducts"></div>
-                        <div className="brandproducts"></div>
+                        {brand2?.map((item) =>
+                            <BrandProduct image={item.img} title={item.title} price={item.price} strikePrice={item.strick_of_price} key={item.title} />
+                        )}
+                    </div>
+                </div>
+                <div className="PopularBrandsSingleDiv">
+                    <div className="brandBanner">
+                        <img src="https://img.gkbcdn.com/bb/jimmy-20200910094916929._p1_.jpg" alt="" />
+                    </div>
+                    <div id="brandProductsDiv">
+                        {brand3?.map((item) =>
+                            <BrandProduct image={item.img} title={item.title} price={item.price} strikePrice={item.strick_of_price} key={item.title} />
+                        )}
+                    </div>
+                </div>
+                <div className="PopularBrandsSingleDiv">
+                    <div className="brandBanner">
+                        <img src="https://img.gkbcdn.com/bb/eleglide-20220531151324673._p1_.jpg" alt="" />
+                    </div>
+                    <div id="brandProductsDiv">
+                        {brand4?.map((item) =>
+                            <BrandProduct image={item.img} title={item.title} price={item.price} strikePrice={item.strick_of_price} key={item.title} />
+                        )}
                     </div>
                 </div>
             </div>
@@ -371,6 +326,58 @@ export const BestSellerProduct = ({ image, title, price, strick_of_price, rating
                 </div>
                 <h2>₹ {price}</h2>
                 <p>₹ {strick_of_price || price}</p>
+            </div>
+        </div>
+    )
+}
+
+const DealOfDay = ({image,price,StricePrice}) => {
+    return (
+        <div className="dealOfDayProductsSingleDiv">
+            <div className="dealOfDayProductsSingleImgDiv">
+                <img src={image} alt="" />
+            </div>
+            <div className="dealOfDayProductsSingleDetailsDiv">
+                <div className="dealOfDayProductsSingleOffDiv">25% OFF</div>
+                <h3>₹ {price}</h3>
+                <p>₹ {StricePrice}</p>
+            </div>
+            <div className="dealOfDayProductsSingleBottomDiv">
+                <div className="dealOfDayProductsSingleStatDiv">
+                    <div className="dealOfDayProductsSingleProgressDiv"></div>
+                </div>
+                <p>54 left</p>
+            </div>
+        </div>
+    )
+}
+
+const FeatureProduct = ({image,title,price,strikePrice}) => {
+    return (
+        <div className="FeaturedProductsSingle">
+            <div className="FeaturedProductsSingleImg">
+                <img src={image} alt="" />
+            </div>
+            <div className="FeaturedProductsSingleContent">
+                <h3>{title}</h3>
+                <h4>₹ {price}</h4>
+                <p>₹{strikePrice}</p>
+            </div>
+        </div>
+    )
+}
+
+const BrandProduct = ({image,title,price,strikePrice}) => {
+    return (
+        <div className="brandproducts">
+            <div className="brandproductsImg">
+                <img src={image} alt="" />
+            </div>
+            <div className="brandproductsContent">
+                <div className="brandproductsContentOff">24% OFF</div>
+                <h3>{title}</h3>
+                <h4>₹ {price}</h4>
+                <p>₹ {strikePrice}</p>
             </div>
         </div>
     )

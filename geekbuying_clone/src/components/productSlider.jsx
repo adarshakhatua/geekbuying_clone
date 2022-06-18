@@ -145,7 +145,7 @@ const carouselProperties3 = {
 
 const MultiItemCarousel = (data) => {
     const slides = data.data
-    console.log(data.data)
+    // console.log(slides)
     return (
         <div  className="carousel" >
             <Slider {...carouselProperties1} style={{width:"1500px"}}>
