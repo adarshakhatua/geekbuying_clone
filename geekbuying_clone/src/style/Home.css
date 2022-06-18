@@ -419,13 +419,13 @@
     padding: 10px 0px;
 }
 #BestSellerDiv{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 486px;
     width: 1500px;
     margin: 40px auto;
 }
 #BestSellerText{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 1500px;
     display: flex;
     align-items: flex-end;
@@ -443,24 +443,24 @@
     color: #0066FF;
 }
 #BestSeller{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 445px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .BestSellerProduct{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 405px;
     width: 244px;
 }
 .BestSellerProductImg{
     height: 240px;
     width: 240px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .BestSellerProductContent{
-    border: 1px dashed gray;
+    /* border: 1px dashed gray; */
 }
 .BestSellerProductOff{
     height: 16px;
@@ -475,14 +475,15 @@
     color: white;
 }
 .BestSellerProductContent h3{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 40px;
     font-size: 14px;
     line-height: 20px;
     margin: 10px 0px;
+    overflow: hidden;
 }
 .BestSellerProductRating{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 18px;
     display: flex;
     margin: 8px 0px;
@@ -604,7 +605,7 @@
     text-decoration: line-through;
 }
 #RecommendedForYouDiv{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 264px;
     width: 1500px;
     margin: 40px auto;
@@ -613,7 +614,7 @@
     justify-content: space-between;
 }
 #textRecommendedForYou{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     height: 38px;
 }
 #textRecommendedForYou h2 {
@@ -624,15 +625,21 @@
     padding: 0px;
 }
 #RecommendedForYou{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 210px;
     width: 1500px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
 .RecommendedProduct{
-    border: 1px dashed green;
+    box-sizing: border-box;
+    /* border: 1px dashed green; */
+    height: 165px;
+    width: 165px;
+}
+.RecommendedProduct img{
     height: 165px;
     width: 165px;
 }

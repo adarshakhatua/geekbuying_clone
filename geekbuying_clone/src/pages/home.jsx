@@ -2,11 +2,19 @@ import "../style/Home.css";
 import CaptionCarousel from "../components/slider1";
 import BrandSlider from "../components/popularBrandsSlider";
 import { AiFillStar } from "react-icons/ai";
-import MultiItemCarousel from "../components/productSlider";
-
+import { MultiItemCarousel, BestSellerMultiItemCarousel, RecommendedMultiItemCarousel } from "../components/productSlider";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProduct } from "../redux/products/action";
 
 
 export const Home = () => {
+    const dispatch = useDispatch();
+    const data = useSelector((store) => store.product.data);
+    
+    useEffect(() => {
+        dispatch(fetchProduct());
+    },[])
     return (
         <div id="HomePage">
             <div id="anniversaryDiv">
@@ -119,7 +127,7 @@ export const Home = () => {
                     <div id="NewForYouSlider">
                         {/* <NewForYouCard /> */}
                         {/* <ProductSlider/> */}
-                        <MultiItemCarousel/>
+                        <MultiItemCarousel data={data} />
                         {/* <div className="NewForYou"></div>
                         <div className="NewForYou"></div>
                         <div className="NewForYou"></div> */}
@@ -218,31 +226,9 @@ export const Home = () => {
                     <p>See More</p>
                 </div>
                 <div id="BestSeller">
-                    <div className="BestSellerProduct">
-                        <div className="BestSellerProductImg">
-                            <img src="https://img.gkbcdn.com/p/2019-03-18/tronsmart-element-t6-plus-bluetooth-speaker-black-1574132869322._w280_p1_.jpg" alt="" />
-                        </div>
-                        <div className="BestSellerProductContent">
-                            <div className="BestSellerProductOff">25% OFF</div>
-                            <h3>Tronsmart Element T6 Plus Portable Bluetooth 5.0 Speaker with 40W Max</h3>
-                            <div className="BestSellerProductRating">
-                                <div className="BestSellerProductRatingStar">
-                                    <AiFillStar />
-                                    <AiFillStar />
-                                    <AiFillStar />
-                                    <AiFillStar />
-                                    <AiFillStar />
-                                </div>
-                                <p>211</p>
-                            </div>
-                            <h2>₹4830.80</h2>
-                            <p>₹6441.34</p>
-                        </div>
-                    </div>
-
-                    <div className="BestSellerProduct"></div>
-                    <div className="BestSellerProduct"></div>
-                    <div className="BestSellerProduct"></div>
+                    
+                    {/* <BestSellerProduct/> */}
+                    <BestSellerMultiItemCarousel data={data} />
                 </div>
             </div>
 
@@ -342,16 +328,7 @@ export const Home = () => {
                     <h2>Recommended For You</h2>
                 </div>
                 <div id="RecommendedForYou">
-                    <div className="RecommendedProduct">
-                        <img src="https://img.gkbcdn.com/p/2022-01-18/FAFREES-26-Inch-Electric-Bike-250W-Powerful-Motor---White-493949-0._w280_.jpg" alt="" />
-                    </div>
-                    <div className="RecommendedProduct"></div>
-                    <div className="RecommendedProduct"></div>
-                    <div className="RecommendedProduct"></div>
-                    <div className="RecommendedProduct"></div>
-                    <div className="RecommendedProduct"></div>
-                    <div className="RecommendedProduct"></div>
-                    <div className="RecommendedProduct"></div>
+                    <RecommendedMultiItemCarousel data={data} />
                 </div>
             </div>
         </div>
@@ -368,6 +345,32 @@ export const NewForYouCard = ({image,title,price}) => {
             <div className="NewForYouContent">
                 <h3>{title}</h3>
                 <p>₹ {price}</p>
+            </div>
+        </div>
+    )
+}
+
+export const BestSellerProduct = ({ image, title, price, strick_of_price, rating_count, }) => {
+    return (
+        <div className="BestSellerProduct">
+            <div className="BestSellerProductImg">
+                <img src={image} alt="" />
+            </div>
+            <div className="BestSellerProductContent">
+                <div className="BestSellerProductOff">25% OFF</div>
+                <h3>{title}</h3>
+                <div className="BestSellerProductRating">
+                    <div className="BestSellerProductRatingStar">
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                        <AiFillStar />
+                    </div>
+                    <p>{rating_count || 0}</p>
+                </div>
+                <h2>₹ {price}</h2>
+                <p>₹ {strick_of_price || price}</p>
             </div>
         </div>
     )
