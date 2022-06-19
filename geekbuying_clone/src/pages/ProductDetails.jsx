@@ -3,6 +3,10 @@ import { useSelector,useDispatch} from "react-redux";
 import { fetchProduct } from "../redux/products/action";
 import { useEffect } from "react";
 import { BsFillStarFill } from "react-icons/bs";
+import { GrFavorite } from "react-icons/gr";
+import payment from "../files/payment.png";
+import price from "../files/price.png";
+import security from "../files/security.png";
 
 
 export const ProductDetails = () => {
@@ -63,24 +67,27 @@ export const ProductDetails = () => {
                         </div>
                     </div>
                     <div id="btnDiv">
-                        <button>Add to Cart</button>
-                        <button> Buy Now</button>
-                        <p>Fav</p>
+                        <button id="firstBtn">Add to Cart</button>
+                        <button id="secondBtn"> Buy Now</button>
+                        <p><GrFavorite/></p> 
                     </div>
                     <div id="paymentDiv">
-                        <div id="paypal">
+                        {/* <div id="paypal">
                             <p>Payment:</p>
                             <div id="paypalImg"></div>
-                        </div>
+                        </div> */}
+                        <img src={payment} alt="" />
                         <div id="priceMatch">
-                            <div>Price Match</div>
+                            {/* <div>Price Match</div>
                             <div>Dropshipping Download</div>
-                            <div>Bulk Order Rebate</div>
+                            <div>Bulk Order Rebate</div> */}
+                            <img src={price} alt="" />
                         </div>
                         <div id="security">
+                            {/* <div></div>
                             <div></div>
-                            <div></div>
-                            <div></div>
+                            <div></div> */}
+                            <img src={security} alt="" />
                         </div>
                     </div>
                 </div>
