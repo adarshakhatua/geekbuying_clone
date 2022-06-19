@@ -1,0 +1,222 @@
+*{
+    font-family: sans-serif;
+}
+#ProductDetailsPage{
+    border: 1px solid black;
+    margin: auto;
+    width: 1500px;
+}
+#breadcrum{
+    border: 1px dashed red;
+    width: 1500px;
+    margin: 16px auto;
+}
+#productPrimaryDiv{
+    border: 1px dashed green;
+    height: 603px;
+    width: 1500px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#productPrimaryDivImg{
+    border: 1px solid gray;
+    height: 100%;
+    width: 500px;
+}
+#productPrimaryDivImg img{
+    height: 500px;
+    width: 500px;
+}
+#productPrimaryDivTitle{
+    border: 1px solid black;
+    width: 750px;
+    height: 100%;
+}
+#title{
+    border: 1px dashed green;
+    height: 48px;
+    font-size: 18px;
+    font-weight: 700;
+}
+#review,#review1,#review2{
+    display: flex;
+}
+#review1 p{
+    font-size: 14px;
+}
+#review1 p:first-child{
+    /* border: 1px solid black; */
+    display: flex;
+    margin: 0px 5px;
+    width: 45px;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 14px;
+}
+#review2{
+    font-size: 14px;
+    margin: 0px 8px;
+}
+#review p{
+    font-size: 14px;
+    margin: 0px 8px;
+}
+#PriceDiv{
+    height: 38px;
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+}
+#PriceDiv h3{
+    font-size: 28px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+#PriceDiv p{
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #999999;
+}
+#OffDiv{
+    height: 22px;
+    width: 74px;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    background-color: #f1403c;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+}
+#newUser{
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
+#newUser p{
+    font-size: 14px;
+    color: #0066FF;
+    background-color: #F1F6F8;
+    padding: 4px 10px;
+}
+#newUser h3 {
+    font-size: 14px;
+    color: #0066FF;
+    padding: 4px 10px;
+}
+#shipDiv{
+    border: 1px dashed red; 
+}
+#shipDiv p{
+    font-size: 14px;
+    color: #46474A;
+}
+#shippingCountry{
+    font-size: 14px;
+    height: 30px;
+    width: 88px;
+    margin: 0px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    color: #0066FF;
+    border: 1px solid #0066FF;
+}
+#shipFrom{
+    border: 1px solid blue;
+    display: flex;
+    align-items: center;
+}
+#qtyDiv{
+    display: flex;
+    align-items: center;
+}
+#qtyDiv p{
+    font-size: 14px;
+}
+#qty{
+    width: 130px;
+    height: 30px;
+    border: 1px solid rgb(137, 137, 137);
+    margin: 0px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#qty p{
+    width: 30px;
+    height: 100%;
+    border: 1px solid rgb(137, 137, 137);
+}
+#btnDiv{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+#paypal{
+    display: flex;
+    align-items: center;
+}
+#priceMatch{
+    display: flex;
+    align-items: center;
+}
+#security{
+    display: flex;
+    align-items: center;
+}
+#productPrimaryDivAlsoView{
+    border: 1px solid black;
+    width: 200px;
+    height: 100%;
+}
+#shareDiv{
+    border: 1px dotted pink;
+    height: 35px;
+    width: 502px;
+    display: flex;
+    align-items: center;
+}
+#recommendedDiv{
+    border: 1px solid black;
+    height: 364px;
+    width: 1500px;
+    margin: auto;
+}
+#ProductDescription{
+    border: 1px dotted blue;
+    width: 1500px;
+    margin: auto;
+}
+#ProductDescriptionHeading{
+    border: 1px solid black;
+    height: 60px;
+    display: flex;
+}
+#ProductDescriptionHeading div{
+    width: 172px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    line-height: 60px;
+    /* border: 1px solid black; */
+    height: 60px;
+}
+#ProductDescriptionHeadingDescription{
+    background-color: #0066FF;
+    font-weight: 700;
+    color: white;
+}
+#ProductDescriptionHeadingReviews,#ProductDescriptionHeadingQA{
+    color: #2E2F32;
+}
+#ProductDescriptionContent{
+    border: 1px dashed blue;
+    margin: 20px 0px;
+}
