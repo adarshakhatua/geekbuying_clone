@@ -281,6 +281,7 @@ dd{
 /**********SHIPPING POP********/
 #shippingPopDiv{
     position: absolute;
+    z-index: 20;
     top: 115px;
     left: 1150px;
     border: 1px solid rgb(224, 224, 224);
@@ -302,6 +303,7 @@ dd{
 }
 #shippingPopDiv li{
     list-style-type:none;
+    
     border: 1px solid rgb(200, 200, 200);
     display: flex;
     justify-content: space-between;
@@ -353,6 +355,7 @@ dd{
     background-color: white;
     color: #333333;
     position: absolute;
+    z-index: 20;
     top: 112px;
     padding: 10px 20px;
 }
@@ -444,6 +447,7 @@ dd{
     border-radius: 8px;
     background-color: white;
     position: absolute;
+    z-index: 20;
     top: 116px;
     left: 1420px;
     padding: 20px;
